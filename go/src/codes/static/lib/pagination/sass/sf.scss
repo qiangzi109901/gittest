@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+$activeBg : #FFF;
+$activeColor: #333;
+$activeBorder : #FFF;
+$normalColor : #CCC;
+$normalBg : #FFF;
+$normalBorder : #FFF;
+.mypage{
+    text-align:center;
+    ul{
+         list-style-type: none;
+        margin:0;
+        padding:0;
+        display:inline-block;
+        li {
+            float: left;
+            margin: 0 4px;
+            line-height: 1.44;
+            a,span {
+                display:inline-block;
+                line-height: 40px;
+                height:40px;
+                text-align:center;
+                text-decoration: none;
+                font-size: 14px;
+                background-color: $normalBg;
+                border:1px solid $normalBorder;
+                border-radius:2px;
+                color:$normalColor;
+            }
+            .word>a,.word>span{
+                width:auto;
+            }
+            &.word{
+                a,span{
+                    width: auto;
+                }
+                &.prev span,&.next span,&.prev a,&.next a{
+                    padding: 0 10px;
+                }
+            }
+            &.active span{
+                background-color: $activeBg;
+                border:1px solid $activeBorder;
+                color:$activeColor;
+                font-weight:bold;  
+            }
+            &.disabled span{
+                cursor:not-allowed;
+                color:#999999;
+            }
+            &.mypage-li.num.disabled{
+                background-color:inherit;
+            }
+            a:hover{
+                color:$activeColor;
+                background-color: $activeBg;
+                cursor:pointer;
+                border:1px solid $activeBorder;
+            }
+            input.go{
+                border:1px solid #EEEEEE;
+                padding-left:3px;
+                padding-right:3px;
+            }
+        }
+    }
+    .nodata{
+        color:#DDD;
+    }
+}
+
+

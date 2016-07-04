@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql id="user">
+	<insert id="add">
+		insert into 
+			user(
+				username,password,age,gender
+			)
+			value(
+				{{.Username}},
+				{{.Password}},
+				{{.Age}},
+				{{.Gender}}
+			)
+	</insert>
+</sql>
